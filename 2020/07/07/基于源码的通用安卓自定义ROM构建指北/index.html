@@ -5,15 +5,54 @@
   
 
   
-  <title>Hexo</title>
+  <title>基于源码的通用安卓自定义ROM构建指北 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="基于源码的通用安卓自定义ROM构建指北前情提要： 如果你打算自行构建rom那么，你需要提前准备以下几点  一台安装了linux系统的电脑，性能尽量高一点，但也不是说性能低下就不能构建了，但要用时间来弥补性能差距，简单来说就是性能越差所花的世界就越长。  以作者为例，作者的电脑CPU：AMD Ryzen 1400 内存：Kington ddr4 2400 超2666 硬盘 西数500G 使用不知名固">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基于源码的通用安卓自定义ROM构建指北">
+<meta property="og:url" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="基于源码的通用安卓自定义ROM构建指北前情提要： 如果你打算自行构建rom那么，你需要提前准备以下几点  一台安装了linux系统的电脑，性能尽量高一点，但也不是说性能低下就不能构建了，但要用时间来弥补性能差距，简单来说就是性能越差所花的世界就越长。  以作者为例，作者的电脑CPU：AMD Ryzen 1400 内存：Kington ddr4 2400 超2666 硬盘 西数500G 使用不知名固">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-05-07-11-10-image.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-05-10-35-18-image.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-05-14-21-37-image.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-05-14-22-27-image.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-07-15-49-15-image.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-05-14-24-07-image.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-05-31-10-image.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-05-35-22-image.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-05-34-51-image.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-05-38-52-image.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-06-22-02-image.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-06-10-34-image.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-08-35-42-image.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-08-36-33-image.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-08-40-18-image.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-08-40-27-image.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-09-39-54-image.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-09-40-36-image.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-08-49-10-image.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-09-04-12-image.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-08-42-08-image.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-09-12-33-image.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-09-12-11-image.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-09-27-01-image.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-09-26-47-image.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-09-28-04-image.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-09-28-21-image.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-09-31-17-image.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-09-32-23-image.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-09-36-24-image.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-09-39-54-image.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-09-40-36-image.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-09-46-55-image.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-09-48-35-image.png">
+<meta property="article:published_time" content="2020-07-07T09:42:49.650Z">
+<meta property="article:modified_time" content="2020-07-07T09:48:38.825Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-05-07-11-10-image.png">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -62,9 +101,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-基于源码的通用安卓自定义ROM构建指北" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-基于源码的通用安卓自定义ROM构建指北" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/" class="article-date">
   <time datetime="2020-07-07T09:42:49.650Z" itemprop="datePublished">2020-07-07</time>
@@ -77,8 +114,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/">基于源码的通用安卓自定义ROM构建指北</a>
+    <h1 class="article-title" itemprop="name">
+      基于源码的通用安卓自定义ROM构建指北
     </h1>
   
 
@@ -477,60 +514,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/07/07/hello-world/" class="article-date">
-  <time datetime="2020-07-07T09:20:29.131Z" itemprop="datePublished">2020-07-07</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/07/hello-world/">Hello World</a>
-    </h1>
+    <a href="/2020/07/07/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/07/07/hello-world/" data-id="ckcbqeswn0000v5758bl62ye0" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-
 
 </section>
         

@@ -14,45 +14,45 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="基于源码的通用安卓自定义ROM构建指北前情提要： 如果你打算自行构建rom那么，你需要提前准备以下几点  一台安装了linux系统的电脑，性能尽量高一点，但也不是说性能低下就不能构建了，但要用时间来弥补性能差距，简单来说就是性能越差所花的世界就越长。  以作者为例，作者的电脑CPU：AMD Ryzen 1400 内存：Kington ddr4 2400 超2666 硬盘 西数500G 使用不知名固">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-05-07-11-10-image.png">
-<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-05-10-35-18-image.png">
-<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-05-14-21-37-image.png">
-<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-05-14-22-27-image.png">
-<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-07-15-49-15-image.png">
-<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-05-14-24-07-image.png">
-<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-05-31-10-image.png">
-<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-05-35-22-image.png">
-<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-05-34-51-image.png">
-<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-05-38-52-image.png">
-<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-06-22-02-image.png">
-<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-06-10-34-image.png">
-<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-08-35-42-image.png">
-<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-08-36-33-image.png">
-<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-08-40-18-image.png">
-<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-08-40-27-image.png">
-<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-09-39-54-image.png">
-<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-09-40-36-image.png">
-<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-08-49-10-image.png">
-<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-09-04-12-image.png">
-<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-08-42-08-image.png">
-<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-09-12-33-image.png">
-<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-09-12-11-image.png">
-<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-09-27-01-image.png">
-<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-09-26-47-image.png">
-<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-09-28-04-image.png">
-<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-09-28-21-image.png">
-<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-09-31-17-image.png">
-<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-09-32-23-image.png">
-<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-09-36-24-image.png">
-<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-09-39-54-image.png">
-<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-09-40-36-image.png">
-<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-09-46-55-image.png">
-<meta property="og:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-09-48-35-image.png">
+<meta property="og:image" content="http://yoursite.com/.com//2020-07-05-07-11-10-image.png">
+<meta property="og:image" content="http://yoursite.com/.com//2020-07-05-10-35-18-image.png">
+<meta property="og:image" content="http://yoursite.com/.com//2020-07-05-14-21-37-image.png">
+<meta property="og:image" content="http://yoursite.com/.com//2020-07-05-14-22-27-image.png">
+<meta property="og:image" content="http://yoursite.com/.com//2020-07-07-15-49-15-image.png">
+<meta property="og:image" content="http://yoursite.com/.com//2020-07-05-14-24-07-image.png">
+<meta property="og:image" content="http://yoursite.com/.com//2020-07-06-05-31-10-image.png">
+<meta property="og:image" content="http://yoursite.com/.com//2020-07-06-05-35-22-image.png">
+<meta property="og:image" content="http://yoursite.com/.com//2020-07-06-05-34-51-image.png">
+<meta property="og:image" content="http://yoursite.com/.com//2020-07-06-05-38-52-image.png">
+<meta property="og:image" content="http://yoursite.com/.com//2020-07-06-06-22-02-image.png">
+<meta property="og:image" content="http://yoursite.com/.com//2020-07-06-06-10-34-image.png">
+<meta property="og:image" content="http://yoursite.com/.com//2020-07-06-08-35-42-image.png">
+<meta property="og:image" content="http://yoursite.com/.com//2020-07-06-08-36-33-image.png">
+<meta property="og:image" content="http://yoursite.com/.com//2020-07-06-08-40-18-image.png">
+<meta property="og:image" content="http://yoursite.com/.com//2020-07-06-08-40-27-image.png">
+<meta property="og:image" content="http://yoursite.com/.com//2020-07-06-09-39-54-image.png">
+<meta property="og:image" content="http://yoursite.com/.com//2020-07-06-09-40-36-image.png">
+<meta property="og:image" content="http://yoursite.com/.com//2020-07-06-08-49-10-image.png">
+<meta property="og:image" content="http://yoursite.com/.com//2020-07-06-09-04-12-image.png">
+<meta property="og:image" content="http://yoursite.com/.com//2020-07-06-08-42-08-image.png">
+<meta property="og:image" content="http://yoursite.com/.com//2020-07-06-09-12-33-image.png">
+<meta property="og:image" content="http://yoursite.com/.com//2020-07-06-09-12-11-image.png">
+<meta property="og:image" content="http://yoursite.com/.com//2020-07-06-09-27-01-image.png">
+<meta property="og:image" content="http://yoursite.com/.com//2020-07-06-09-26-47-image.png">
+<meta property="og:image" content="http://yoursite.com/.com//2020-07-06-09-28-04-image.png">
+<meta property="og:image" content="http://yoursite.com/.com//2020-07-06-09-28-21-image.png">
+<meta property="og:image" content="http://yoursite.com/.com//2020-07-06-09-31-17-image.png">
+<meta property="og:image" content="http://yoursite.com/.com//2020-07-06-09-32-23-image.png">
+<meta property="og:image" content="http://yoursite.com/.com//2020-07-06-09-36-24-image.png">
+<meta property="og:image" content="http://yoursite.com/.com//2020-07-06-09-39-54-image.png">
+<meta property="og:image" content="http://yoursite.com/.com//2020-07-06-09-40-36-image.png">
+<meta property="og:image" content="http://yoursite.com/.com//2020-07-06-09-46-55-image.png">
+<meta property="og:image" content="http://yoursite.com/.com//2020-07-06-09-48-35-image.png">
 <meta property="article:published_time" content="2020-07-07T09:42:49.650Z">
 <meta property="article:modified_time" content="2020-07-07T09:48:38.825Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-05-07-11-10-image.png">
+<meta name="twitter:image" content="http://yoursite.com/.com//2020-07-05-07-11-10-image.png">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -129,7 +129,7 @@
 <li><p><code>一台安装了linux系统的电脑</code>，性能尽量高一点，但也不是说性能低下就不能构建了，但要用时间来弥补性能差距，简单来说就是性能越差所花的世界就越长。</p>
 <ul>
 <li><p>以作者为例，作者的电脑CPU：AMD Ryzen 1400 内存：Kington ddr4 2400 超2666 硬盘 西数500G 使用不知名固态通过 lvm 设置5G缓存加速，第一次总共用时<code>24小时</code>，其中多数时间用来重新编译，因为莫名奇妙的编译bug，第二次用时<code>4小时</code>，如何做到缩短时间的呢，都要归功于<code>Cache</code>，编译过一次会缓存编译结果，所以第二次<code>编译的时长就会大大缩短，同时代价是更多的储存空间占用</code></p>
-<p><img src="%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-05-07-11-10-image.png" alt=""></p>
+<p><img src="/.com//2020-07-05-07-11-10-image.png" alt></p>
 </li>
 </ul>
 </li>
@@ -256,7 +256,7 @@
 </blockquote>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls setup</span><br></pre></td></tr></table></figure>
 
-<img title="" src="基于源码的通用安卓自定义ROM构建指北/2020-07-05-10-35-18-image.png" alt="" data-align="left">
+<img title src="/.com//2020-07-05-10-35-18-image.png" alt data-align="left">
 
 <blockquote>
 <p>介绍一下，<code>android_build_env.sh</code> 这个文件是给使用apt包管理器的发行版使用的例如<code>Ubuntu/Linux Mint</code>，其它的按照发行版的名称命名，有使用pacman的<code>arch/manjaro</code>，还有rpm的<code>fedora</code>等。</p>
@@ -300,19 +300,19 @@
 <blockquote>
 <p>去gihub搜索blissRoms</p>
 </blockquote>
-<p><img src="%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-05-14-21-37-image.png" alt=""></p>
+<p><img src="/.com//2020-07-05-14-21-37-image.png" alt></p>
 <blockquote>
 <p>找到blissRoms</p>
 </blockquote>
-<p><img src="%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-05-14-22-27-image.png" alt=""></p>
+<p><img src="/.com//2020-07-05-14-22-27-image.png" alt></p>
 <blockquote>
 <p>找到manfest</p>
 </blockquote>
-<p><img src="%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-07-15-49-15-image.png" alt=""></p>
+<p><img src="/.com//2020-07-07-15-49-15-image.png" alt></p>
 <blockquote>
 <p>找到带repo字样的命令</p>
 </blockquote>
-<p><img src="%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-05-14-24-07-image.png" alt=""></p>
+<p><img src="/.com//2020-07-05-14-24-07-image.png" alt></p>
 <blockquote>
 <p>复制粘贴</p>
 </blockquote>
@@ -327,22 +327,22 @@
 <blockquote>
 <p>首先，找到你需要构建rom的目标手机的已经构建过ROM的作者的github账号，一般是lineageOS的作者，不过这里使用Slowhy的pe项目。</p>
 </blockquote>
-<p><img src="%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-05-31-10-image.png" alt=""></p>
+<p><img src="/.com//2020-07-06-05-31-10-image.png" alt></p>
 <blockquote>
 <p>找到带有manfest字样的项目并点击，进入以下界面</p>
 </blockquote>
-<p><img src="%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-05-35-22-image.png" alt=""></p>
+<p><img src="/.com//2020-07-06-05-35-22-image.png" alt></p>
 <blockquote>
 <p>找到branch（分支），点击选择需要的分支，一般是安卓版本</p>
 </blockquote>
-<p><img src="%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-05-34-51-image.png" alt=""></p>
+<p><img src="/.com//2020-07-06-05-34-51-image.png" alt></p>
 <blockquote>
 <p>这里我们要构建的是安卓十的rom所以选择pe-ten，不同作者有不同命名习惯，不过一般都是他维护的rom的版本名称。</p>
 </blockquote>
 <blockquote>
 <p>找到与你手机代号对应的xml文件，lgv30对应h930</p>
 </blockquote>
-<p><img src="%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-05-38-52-image.png" alt=""></p>
+<p><img src="/.com//2020-07-06-05-38-52-image.png" alt></p>
 <blockquote>
 <p>把这个文件下载好，复制到<code>~/AOSP/aosp/.repo/local_manfests</code>文件夹下</p>
 </blockquote>
@@ -366,14 +366,14 @@
 <blockquote>
 <p>此过程花费时间较长</p>
 </blockquote>
-<p><img src="%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-06-22-02-image.png" alt=""></p>
+<p><img src="/.com//2020-07-06-06-22-02-image.png" alt></p>
 <blockquote>
 <p> <strong>出现successfully代表同步完成</strong></p>
 </blockquote>
 <blockquote>
 <p>出现这种无法移除的手动移除就好</p>
 </blockquote>
-<img title="" src="基于源码的通用安卓自定义ROM构建指北/2020-07-06-06-10-34-image.png" alt="" data-align="inline">
+<img title src="/.com//2020-07-06-06-10-34-image.png" alt data-align="inline">
 
 <h2 id="3-开始构建"><a href="#3-开始构建" class="headerlink" title="3.开始构建"></a>3.开始构建</h2><blockquote>
 <p>在构建之前内存不够的需要开启swap/zswap/zram/swapfile，四选一，8g以下，给出16g的交换空间，8g以上再分配4到8g，多肯定是多了，以防万一嘛，多的都去了还差这么点？</p>
@@ -386,13 +386,13 @@
 </blockquote>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd device/lge/h930</span><br></pre></td></tr></table></figure>
 
-<p><img src="%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-08-35-42-image.png" alt=""></p>
+<p><img src="/.com//2020-07-06-08-35-42-image.png" alt></p>
 <blockquote>
 <p>修改文件名称，aosp是原来rom的名称，<code>把它修改为你目标构建rom的名称</code>，例如lineage，havoc，pe等等</p>
 </blockquote>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv aosp_h930.mk bliss_h930.mk</span><br></pre></td></tr></table></figure>
 
-<p><img src="%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-08-36-33-image.png" alt=""></p>
+<p><img src="/.com//2020-07-06-08-36-33-image.png" alt></p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv aosp.dependencies bliss.dependencies</span><br></pre></td></tr></table></figure>
 
 <blockquote>
@@ -401,29 +401,29 @@
 <p><strong>后面通通使用vim编辑器修改文件，不会使用可自行将vim替换为其他编辑器，或通过文件管理器以图形化操作修改，主要是看需要修改那些文件（看图片就好）</strong></p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim bliss_h930.mk</span><br></pre></td></tr></table></figure>
 
-<p><img src="%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-08-40-18-image.png" alt=""></p>
-<p><img src="%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-08-40-27-image.png" alt=""></p>
+<p><img src="/.com//2020-07-06-08-40-18-image.png" alt></p>
+<p><img src="/.com//2020-07-06-08-40-27-image.png" alt></p>
 <blockquote>
 <p>然后找到vendor/aosp/config/common_full_phone.mk这一行</p>
 </blockquote>
-<p><img src="%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-09-39-54-image.png" alt=""></p>
+<p><img src="/.com//2020-07-06-09-39-54-image.png" alt></p>
 <blockquote>
 <p>修改它</p>
 </blockquote>
-<p><img src="%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-09-40-36-image.png" alt=""></p>
+<p><img src="/.com//2020-07-06-09-40-36-image.png" alt></p>
 <blockquote>
 <p>这里的名称也要修改，而且是一定要改</p>
 </blockquote>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim AndroidProducts.mk</span><br></pre></td></tr></table></figure>
 
-<p><img src="%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-08-49-10-image.png" alt=""></p>
-<p><img src="%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-09-04-12-image.png" alt=""></p>
+<p><img src="/.com//2020-07-06-08-49-10-image.png" alt></p>
+<p><img src="/.com//2020-07-06-09-04-12-image.png" alt></p>
 <blockquote>
 <p>有的机型有common文件，有的没有</p>
 </blockquote>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd ~/Android/aosp/device/lge/joan-common</span><br></pre></td></tr></table></figure>
 
-<p><img src="%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-08-42-08-image.png" alt=""></p>
+<p><img src="/.com//2020-07-06-08-42-08-image.png" alt></p>
 <blockquote>
 <p>同样的</p>
 </blockquote>
@@ -439,37 +439,37 @@
 </blockquote>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">. build/envsetup.sh</span><br></pre></td></tr></table></figure>
 
-<p><img src="%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-09-12-33-image.png" alt=""></p>
+<p><img src="/.com//2020-07-06-09-12-33-image.png" alt></p>
 <blockquote>
 <p>设置ccache最大大小</p>
 </blockquote>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ccache -M 50G</span><br></pre></td></tr></table></figure>
 
-<p><img src="%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-09-12-11-image.png" alt=""></p>
+<p><img src="/.com//2020-07-06-09-12-11-image.png" alt></p>
 <p><strong>好的，到这里，所有的准备工作终于全部都做完了，真是有够麻烦的呢</strong></p>
 <h2 id="开始预构建"><a href="#开始预构建" class="headerlink" title="开始预构建"></a>开始预构建</h2><blockquote>
 <p>构建命令多种多样具体看你的rom的readme，比如我的bliss</p>
 </blockquote>
-<p><img src="%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-09-27-01-image.png" alt=""></p>
-<p><img src="%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-09-26-47-image.png" alt=""></p>
+<p><img src="/.com//2020-07-06-09-27-01-image.png" alt></p>
+<p><img src="/.com//2020-07-06-09-26-47-image.png" alt></p>
 <blockquote>
 <p>又比如浩克</p>
 </blockquote>
-<p><img src="%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-09-28-04-image.png" alt=""></p>
-<p><img src="%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-09-28-21-image.png" alt=""></p>
+<p><img src="/.com//2020-07-06-09-28-04-image.png" alt></p>
+<p><img src="/.com//2020-07-06-09-28-21-image.png" alt></p>
 <blockquote>
 <p>但总的来说还是有通用的方法</p>
 </blockquote>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lunch</span><br></pre></td></tr></table></figure>
 
-<p><img src="%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-09-31-17-image.png" alt=""></p>
-<h2 id="报错的简单修复（可忽略）"><a href="#报错的简单修复（可忽略）" class="headerlink" title="报错的简单修复（可忽略）"></a>报错的简单修复（可忽略）</h2><p><img src="%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-09-32-23-image.png" alt=""></p>
+<p><img src="/.com//2020-07-06-09-31-17-image.png" alt></p>
+<h2 id="报错的简单修复（可忽略）"><a href="#报错的简单修复（可忽略）" class="headerlink" title="报错的简单修复（可忽略）"></a>报错的简单修复（可忽略）</h2><p><img src="/.com//2020-07-06-09-32-23-image.png" alt></p>
 <blockquote>
 <p>选择之后突然有报错，这时候不要慌，有报错是很正常的，粗略读以下原来，是vendor/aosp/config/common_full_phone.mk不存在。分析以下这个路径我们发现，由于我们需要构建的是blissrom，所以aosp下面的路径当然不存在，那来看看把aosp修改为bliss之后，有没有这个文件</p>
 </blockquote>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls vendor/bliss/config/common_full_phone.mk</span><br></pre></td></tr></table></figure>
 
-<p><img src="%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-09-36-24-image.png" alt=""></p>
+<p><img src="/.com//2020-07-06-09-36-24-image.png" alt></p>
 <blockquote>
 <p>可以看到是有这个文件的，再回过头看看，是哪个文件报的错。</p>
 </blockquote>
@@ -481,22 +481,22 @@
 <blockquote>
 <p>然后找到vendor/aosp/config/common_full_phone.mk这一行</p>
 </blockquote>
-<p><img src="%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-09-39-54-image.png" alt=""></p>
+<p><img src="/.com//2020-07-06-09-39-54-image.png" alt></p>
 <blockquote>
 <p>修改它</p>
 </blockquote>
-<p><img src="%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-09-40-36-image.png" alt=""></p>
+<p><img src="/.com//2020-07-06-09-40-36-image.png" alt></p>
 <blockquote>
 <p>保存退出重新输入命令</p>
 </blockquote>
-<p><img src="%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-09-46-55-image.png" alt=""></p>
+<p><img src="/.com//2020-07-06-09-46-55-image.png" alt></p>
 <blockquote>
 <p>没有报错，完美。</p>
 </blockquote>
 <p><strong>开始构建</strong> </p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mka</span><br></pre></td></tr></table></figure>
 
-<p><img src="%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/2020-07-06-09-48-35-image.png" alt=""></p>
+<p><img src="/.com//2020-07-06-09-48-35-image.png" alt></p>
 <blockquote>
 <p>然后就是漫无止境的等待了，其它的各种参数方面的各自的rom都有各自的推荐，最常使用的应该是<code>-j</code>参数了这对于编译速度有很大提升，但一般不建议超过cpu的核心数，同时默认也是不错的，那就在这里完结啰，祝你编译路上不会遇到奇奇怪怪的bug，下次再见！</p>
 </blockquote>
@@ -508,7 +508,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/" data-id="ckcbr40ug0000sv75452p08p9" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/07/07/%E5%9F%BA%E4%BA%8E%E6%BA%90%E7%A0%81%E7%9A%84%E9%80%9A%E7%94%A8%E5%AE%89%E5%8D%93%E8%87%AA%E5%AE%9A%E4%B9%89ROM%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8C%97/" data-id="ckcbri5vg0001bs750cipc06e" class="article-share-link">Share</a>
       
       
     </footer>
